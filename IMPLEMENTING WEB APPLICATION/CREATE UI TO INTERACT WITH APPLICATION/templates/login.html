@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title> Login </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+</head>
+<style>
+  body {
+    background-size: cover;
+    height: 100%;
+    background-image: url("https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/06/grain-bowl-1296x728-header.jpg?w=1155&h=1528");
+
+  }
+
+  img {
+    margin: 20px;
+    border-color: rgb(175, 244, 254);
+    border-style: solid;
+    width: 300px;
+    height: 250px;
+  }
+
+  .btn-upload {
+    border: solid black 2px;
+    background-color: rgb(37, 205, 231);
+    text-decoration: none;
+    color: azure;
+    padding: 5px;
+    margin-bottom: 40px;
+  }
+
+  .btn-upload:hover {
+    color: rgb(32, 57, 241);
+    background-color: azure;
+    border-radius: 10px;
+  }
+</style>
+
+<body></br></br></br></br></br>
+  <div align="center">
+    <div align="center" class="border">
+      <div class="header">
+        <h1 class="word">Login</h1>
+      </div></br></br></br>
+      <h2 class="word">
+        <form action="{{ url_for('login') }}" method="post">
+          <div class="msg">{{ msg }}</div>
+          <input id="username" name="username" type="text" placeholder="Enter Your Username"
+            class="textbox" /></br></br>
+          <input id="password" name="password" type="password" placeholder="Enter Your Password"
+            class="textbox" /></br></br></br>
+          <input type="submit" class="btn" value="Login"></br></br>
+        </form>
+      </h2>
+      <p class="bottom">Don't have an account? <a class="bottom" href="{{url_for('register')}}"> Register</a></p>
+    </div>
+  </div>
+</body>
+
+</html>
