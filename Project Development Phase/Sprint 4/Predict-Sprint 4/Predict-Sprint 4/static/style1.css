@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(125, 222, 241);
+}
+img{
+    margin:20px;
+    border-color:rgb(175, 244, 254);
+    border-style: solid;
+    width:300px;
+    height:250px;
+}
+.btn-upload
+{
+ border:solid black 2px;
+ background-color: rgb(37, 205, 231);
+ text-decoration: none;
+ color: azure;
+ padding: 5px;
+ margin-bottom: 40px;
+}
+.btn-upload:hover
+{
+ color: rgb(32, 57, 241);   
+ background-color: azure;
+ border-radius: 10px;
+}
