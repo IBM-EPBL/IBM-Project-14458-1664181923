@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register-form</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+
+
+
+</head>
+<style>
+  body {
+    background: white;
+    background-size: cover;
+    height: 100%;
+    font-family: "Rubik", sans-serif;
+    background-image: url("https://lifestyleug.com/wp-content/uploads/2022/10/dagvsdx.jpg");
+
+
+  }
+
+  .header {
+    margin-top: 20px;
+    padding: 2px 120px;
+    width: 150px;
+    height: 50px;
+    background-color: #fdfefe;
+    border-radius: 15px;
+  }
+
+  .border {
+    padding: 10px 50px;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #342abc;
+    border-radius: 30px;
+    background-color: rgb(160, 234, 247)
+  }
+
+  .btn {
+    border-radius: 12px;
+    background-color: #212121;
+    color: #fff;
+    width: auto;
+    border: none;
+    padding: 10px 30px;
+    font-family: "Rubik", sans-serif;
+  }
+
+  .btn:hover {
+    color: #212121;
+    background-color: #f5f6f8;
+    border: solid #090219 2px;
+
+  }
+
+  .textbox {
+    padding: 10px 40px;
+    background-color: #47a3f3;
+    color: #090219;
+    border-radius: 10px;
+    border: solid black 2px;
+    /* margin-left: 35px; */
+
+  }
+
+  ::placeholder {
+    color: #101e23;
+    opacity: 1;
+  }
+
+  .word {
+    color: #301ba8;
+    margin-top: 7px;
+  }
+
+  .bottom {
+    color: rgb(14, 9, 32);
+  }
+
+  .welcome {
+    vertical-align: middle;
+    padding-top: 100px;
+    size: 500px;
+    font-weight: bold;
+  }
+
+  label {
+    float: left;
+    padding-left: 10px;
+  }
+  .Register-form .content .input-field {
+    text-align: center;
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .Register-form .ques {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .radio-buttons {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .Register-form .action button {
+    border-radius: 12px;
+    background-color: #212121;
+    color: #fff;
+    width: auto;
+    border: none;
+    padding: 18px;
+    font-family: "Rubik", sans-serif;
+  }
+  .Register-form .action button:hover{
+    color: #212121;
+    background-color: #f5f6f8;
+    border:solid #090219 2px;
+  }
+
+
+
+  .Register-form {
+    background: rgb(160, 234, 247);
+    width: 700px;
+    height: 900px;
+    margin-left: 30px;
+    margin: 80px 80px;
+    text-align: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border: solid black 2px;
+    border-radius: 13px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .Register-form .content .input-field {
+    text-align: center;
+    /* padding-left: 20px; */
+    margin-bottom: 15px;
+  }
+
+  .Register-form .ques {
+    text-align: center;
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  .radio-buttons {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .Register-form .action button {
+    border-radius: 12px;
+    background-color: #212121;
+    color: #fff;
+    width: auto;
+    margin-left: 20px;
+    border: none;
+    padding: 10px 18px;
+    font-family: "Rubik", sans-serif;
+  }
+</style>
+
+
+<body>
+
+  <div class="Register-form">
+    <form action="{{ url_for('register') }}" method="POST">
+      <h3 style="padding:25px ;">Hey there,<br>
+        We were happy that you've taken the first step towards a healthier you.we need a few steps to make u lead a
+        healthy life</h3>
+      <div class="content">
+        <!-- <div class="msg">{{ msg }}</div> -->
+        <div class="input-field">
+          <label for="username">Username :</label><br>
+          <input type="username" name="username" type="text" placeholder="Enter Your Name" class="textbox" /><br>
+        </div>
+        <div class="input-field">
+          <label for="password">Password :</label><br>
+          <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox" /><br>
+          <br>
+          <label for="email">Email ID :</label><br>
+          <input type="email" name="email" type="email" placeholder="Enter Your Email ID" class="textbox" /><br>
+
+        </div>
+
+        <div class="ques">
+          <form>
+            <label for="gender">Gender :</label><br>
+            <input id="Gender" name="Gender" type="text" placeholder="Enter Your Gender" class="textbox" /><br><br>
+
+            <label for="age">What's your age ?</label><br>
+            <input type="age" name="age" placeholder="Enter Your Age" id="age" class="textbox"><br><br>
+
+            <label for="height">What's your current height ?</label><br>
+            <input type="number" placeholder="Enter Your Height" name="height" class="textbox"><br><br>
+
+            <label for="weight">What's your current weight ?</label><br>
+            <input type="number" placeholder="Enter Your weight" name="weight" class="textbox"><br><br>
+
+            <label for="BMI">What's your BMI ?</label><br>
+            <input type="number" placeholder="Enter Your BMI" name="BMI" class="textbox"><br><br>
+          </form>
+        </div>
+        <div class="action">
+          <button type="submit">Register</button>
+          <p class="bottom">Already have an account? <a class="bottom" href="{{url_for('login')}}"> Login</a></p>
+        </div>
+      </div>
+    </form>
+</body>
+
+</html>
